@@ -12,7 +12,7 @@ public class CardTest {
 	public void testCreateAceOfSpades() {
 		Card card = new Card("S","A");
 		assertEquals("S", card.getSuit());
-		assertEquals(10, card.getValue());
+		assertEquals(11, card.getValue());
 		assertEquals("A", card.getRank());
 	}
 	

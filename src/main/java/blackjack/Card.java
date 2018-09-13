@@ -51,7 +51,10 @@ public class Card {
 	 */
 	private int verifyValue(String rank) {
 		for(int i = 0; i < ranks.length; i++){
-			if (rank.toUpperCase().equals(ranks[i]) && i>=10){
+			if(rank.toUpperCase().equals(ranks[i]) && i==ranks.length-1) {
+				return 11;
+			}
+			else if (rank.toUpperCase().equals(ranks[i]) && i>=10){
 				return 10;
 			}
 			else if (rank.toUpperCase().equals(ranks[i])){
