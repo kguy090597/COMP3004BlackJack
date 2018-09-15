@@ -24,5 +24,14 @@ public class DeckTest {
 		tmpDeck.shuffle();
 		assertNotEquals(deck.toString(),tmpDeck.toString());
 	}
+	
+	@Test
+	public void testTakeOffTop() {
+		Deck deck = new Deck();
+		assertEquals(52,deck.SizeOfDeck());
+		Card card = deck.takeOffTop();
+		assertEquals("H1",card.toString());
+		assertEquals(51,deck.SizeOfDeck());
+	}
 
 }
