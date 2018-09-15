@@ -1,12 +1,7 @@
 package blackjack;
 
 
-/**
- * Card class that contains a rank, value, and suit
- * 
- * @author Kevin Guy
- * Date: September 12th, 2018
- */
+
 public class Card {
 	//The value of the card to be used in the game
 	private int value;
@@ -17,7 +12,7 @@ public class Card {
 	//The acceptable suits for the cards
 	private static String[] suits = new String[] {"H","D","S","C"};
 	//The acceptable ranks for the cards
-	private static String[] ranks = new String[] {"1","2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+	private static String[] ranks = new String[] {"1","2","3","4","5","6","7","8","9","J","Q","K","A"};
 	
 	/**
 	 * The constructor for the card
