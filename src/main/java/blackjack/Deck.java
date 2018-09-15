@@ -53,6 +53,24 @@ public class Deck {
 	}
 	
 	/**
+	 * Removes the first card in the deck and returns it
+	 * 
+	 * @return The first card in the deck
+	 */
+	public Card takeOffTop() {
+		return deck.remove(0);
+	}
+	
+	/**
+	 * Returns the current size of the deck
+	 * 
+	 * @return the current size of the deck
+	 */
+	public int SizeOfDeck() {
+		return deck.size();
+	}
+	
+	/**
 	 * Returns the deck as a string with each card separated by a space (" ")
 	 */
 	public String toString() {
