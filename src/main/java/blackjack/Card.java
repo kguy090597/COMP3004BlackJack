@@ -1,7 +1,12 @@
 package blackjack;
 
 
-
+/**
+ * Card class that contains a rank, value, and suit
+ * 
+ * @author Kevin Guy
+ * Date: September 12th, 2018
+ */
 public class Card {
 	//The value of the card to be used in the game
 	private int value;
