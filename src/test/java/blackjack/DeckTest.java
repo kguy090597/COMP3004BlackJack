@@ -28,10 +28,10 @@ public class DeckTest {
 	@Test
 	public void testTakeOffTop() {
 		Deck deck = new Deck();
-		assertEquals(52,deck.SizeOfDeck());
+		assertEquals(52,deck.sizeOfDeck());
 		Card card = deck.takeOffTop();
 		assertEquals("H1",card.toString());
-		assertEquals(51,deck.SizeOfDeck());
+		assertEquals(51,deck.sizeOfDeck());
 	}
 
 }

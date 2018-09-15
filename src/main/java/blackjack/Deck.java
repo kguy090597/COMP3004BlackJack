@@ -58,6 +58,9 @@ public class Deck {
 	 * @return The first card in the deck
 	 */
 	public Card takeOffTop() {
+		if(sizeOfDeck()==0) {
+			return null;
+		}
 		return deck.remove(0);
 	}
 	
@@ -66,7 +69,7 @@ public class Deck {
 	 * 
 	 * @return the current size of the deck
 	 */
-	public int SizeOfDeck() {
+	public int sizeOfDeck() {
 		return deck.size();
 	}
 	
