@@ -19,9 +19,9 @@ public class DeckTest {
 	public void testShuffle() {
 		Deck deck = new Deck();
 		Deck tmpDeck = new Deck();
-		assertEquals(Arrays.toString(deck.getCards()),Arrays.toString(tmpDeck.getCards()));
+		assertEquals(deck.toString(),tmpDeck.toString());
 		deck.shuffle();
-		assertNotEquals(Arrays.toString(deck.getCards()),Arrays.toString(tmpDeck.getCards()));
+		assertNotEquals(deck.toString(),tmpDeck.toString());
 	}
 
 }
