@@ -21,6 +21,7 @@ public class DeckTest {
 		Deck tmpDeck = new Deck();
 		assertEquals(deck.toString(),tmpDeck.toString());
 		deck.shuffle();
+		tmpDeck.shuffle();
 		assertNotEquals(deck.toString(),tmpDeck.toString());
 	}
 
