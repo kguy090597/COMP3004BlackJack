@@ -14,24 +14,24 @@ public class HandTest {
 	public void testAdd() {
 		Hand hand = new Hand();
 		Card card1 = new Card("S","A");
-		Card card2 = new Card("S","1");
-		Card card3 = new Card("S","2");
+		Card card2 = new Card("S","2");
+		Card card3 = new Card("S","3");
 		hand.add(card1);
 		hand.add(card2);
 		hand.add(card3);
-		assertEquals("SA S1 S2", hand.toString());
+		assertEquals("SA S2 S3", hand.toString());
 	}
 	
 	@Test
 	public void testHand() {
 		Hand hand = new Hand();
 		Card card1 = new Card("S","A");
-		Card card2 = new Card("S","1");
-		Card card3 = new Card("S","2");
+		Card card2 = new Card("S","2");
+		Card card3 = new Card("S","3");
 		hand.add(card1);
 		hand.add(card2);
 		hand.add(card3);
-		assertEquals(14,hand.sumHand());
+		assertEquals(16,hand.sumHand());
 		assertEquals(false,hand.isBlackJack());
 	}
 	

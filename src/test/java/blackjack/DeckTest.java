@@ -30,7 +30,7 @@ public class DeckTest {
 		Deck deck = new Deck();
 		assertEquals(52,deck.sizeOfDeck());
 		Card card = deck.takeOffTop();
-		assertEquals("H1",card.toString());
+		assertEquals("H2",card.toString());
 		assertEquals(51,deck.sizeOfDeck());
 	}
 
