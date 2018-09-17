@@ -117,6 +117,45 @@ public class Hand {
 	}
 	
 	/**
+	 * Returns whether or not the hand is a soft 17 (Ace is 11 and other cards sum to 6)
+	 * 
+	 * @return whether or not the hand is a soft 17
+	 */
+	public boolean isSoft17() {
+		//The temporary hand so the real hand order does not change
+		ArrayList<Card> tmpHand = hand;
+		//The temporary sum that adds up the cards that aren't Aces
+		int tmpSum = 0;
+		//Sorts the temporary hand by value (from least to greatest)
+		sort(tmpHand);
+		//Checks if the sum is 17
+		if (sumHand()==17) {
+			//Goes through the cards in the hand
+			for (int i = 0; i < tmpHand.size(); i++) {
+				//Checks to see if the card is an Ace
+				if(tmpHand.get(i).getRank().equals("A")) {
+					//If the sum of the cards before the Ace are 6 then it is a soft 17
+					if(tmpSum==6) {
+						return true;
+					}
+					//Sum of cards that aren't Aces is not 6
+					else {
+						return false;
+					}
+				}
+				else {
+					tmpSum+=tmpHand.get(i).getValue();
+				}
+			}
+		}
+		//Sum of hand is not 17
+		else {
+			return false;
+		}
+		return false;
+	}
+	
+	/**
 	 * Returns the cards in the hand as a list
 	 * 
 	 * @return the cards in the hand
