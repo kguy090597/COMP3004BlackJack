@@ -17,7 +17,7 @@ public class Card {
 	//The acceptable suits for the cards
 	private static String[] suits = new String[] {"H","D","S","C"};
 	//The acceptable ranks for the cards
-	private static String[] ranks = new String[] {"1","2","3","4","5","6","7","8","9","J","Q","K","A"};
+	private static String[] ranks = new String[] {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	
 	/**
 	 * The constructor for the card
@@ -54,11 +54,11 @@ public class Card {
 			if(rank.toUpperCase().equals(ranks[i]) && i==ranks.length-1) {
 				return 11;
 			}
-			else if (rank.toUpperCase().equals(ranks[i]) && i>=10){
+			else if (rank.toUpperCase().equals(ranks[i]) && i>=9){
 				return 10;
 			}
 			else if (rank.toUpperCase().equals(ranks[i])){
-				return i+1;
+				return i+2;
 			}
 		}
 		return -1;

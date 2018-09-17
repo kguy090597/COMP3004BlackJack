@@ -16,7 +16,7 @@ public class Deck {
 	//The acceptable suits for the cards
 	private static String[] suits = new String[] {"H","D","S","C"};
 	//The acceptable ranks for the cards
-	private static String[] ranks = new String[] {"1","2","3","4","5","6","7","8","9","J","Q","K","A"};
+	private static String[] ranks = new String[] {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	
 	/**
 	 * The constructor for the Deck class that initializes the deck with 52 cards
