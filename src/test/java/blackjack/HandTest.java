@@ -135,5 +135,19 @@ public class HandTest {
 		assertEquals(false,hand.isBlackJack());
 		assertEquals(true,hand.isSoft17());
 	}
+	
+	@Test
+	public void testNotSoft17() {
+		Hand hand = new Hand();
+		Card card1 = new Card("S","A");
+		Card card2 = new Card("H","8");
+		Card card3 = new Card("S","8");
+		hand.add(card1);
+		hand.add(card2);
+		hand.add(card3);
+		assertEquals(17,hand.sumHand());
+		assertEquals(false,hand.isBlackJack());
+		assertEquals(false,hand.isSoft17());
+	}
 
 }
