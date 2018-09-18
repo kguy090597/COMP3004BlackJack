@@ -1,7 +1,7 @@
 package blackjack;
 
 /**
- * Hand class that contains the cards in the hand
+ * Player class that contains the player's hand
  * 
  * @author Kevin Guy
  * Date: September 17th, 2018
