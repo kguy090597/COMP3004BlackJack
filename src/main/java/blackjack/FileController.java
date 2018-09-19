@@ -67,7 +67,7 @@ public class FileController {
 			String suit = ""+input.charAt(0);
 			String rank = ""+input.substring(1);
 			Card card = new Card(suit, rank);
-			if(card.getRank() == null || card.getSuit() == null) {
+			if(card.getRank().equals("null") || card.getSuit().equals("null")) {
 				return null;
 			}
 			else if (cardAlreadyPlayed(card)) {
@@ -209,7 +209,7 @@ public class FileController {
 		System.out.println("PLAYER HAND: "+ player.printHand() +" --> "+player.getHand().sumHand());
 		
 		//If the dealer has a soft 17 or hand is 16 or less and there are  commands left
-		while((dealer.getHand().isSoft17() || dealer.getHand().sumHand() <= 16) && commandNumber <= commands.length) {
+		while((dealer.getHand().isSoft17() || dealer.getHand().sumHand() <= 16) && commandNumber < commands.length) {
 			//The card to be hit
 			card = getValidCard(commands[commandNumber++]);
 			System.out.println("Dealer has Hit");
